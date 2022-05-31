@@ -2,7 +2,7 @@
 
 First stage of the project: cleaning up and merging two sets of Tucson Bird Count data.  
 1. TBC data entered directly into Access database (currently managed by Tucson Audubon): [TucsonBirdCount-Access.csv](OriginalData/TucsonBirdCount-Access.csv)
-2. TBD data entered into eBird: [TucsonBirdCount-eBird.csv](OriginalData/TucsonBirdCount-eBird.csv)
+2. TBC data entered into eBird: [TucsonBirdCount-eBird.csv](OriginalData/TucsonBirdCount-eBird.csv)
 
 For more on the TBC, see the [Tucson Audubon website](https://tucsonaudubon.org/our-work/conserving-birds/citizen-science/tucson-bird-count/).  
 Briefly, there are more than 100 routes in the Tucson Valley. Most routes contain 8-12 survey locations (sites). Urban routes are surveyed one morning each spring. Sites in parks are surveyed quarterly. At most sites, observers conduct a 5-min stationary count, recording the number of birds of each species observed.
@@ -45,7 +45,7 @@ Brief description of each file (csv) with original data:
 	- ML Catalog Numbers
 	
 After cleaning up and merging data from Access and eBird (in [TBC_DataCleanUp.R](TBC_DataCleanUp.R)), four files were exported and put in the [MergedData](MergedData) folder:
-1. [TBC_counts.csv](MergedData/TBC_counts.csv): Count data, where each row is associated with a single bird species observed at one site, on one day/time, by one observer. This dataset does not include observations of birds outside the survey area, outside the 5-min survey window, and does not include observations made by someone other than the primary observer. This dataset excludes surveys that violated TBC protocols (eg, traveling or incidental counts in eBird, stationary counts that were not 5-min in duration, counts that occurred before 5am or after noon). One exception, however, is a few sites in parks that are surveyed by walking transects rather than surveyed with stationary points (sites with "T" in the siteID). 
+1. [TBC_counts.csv](MergedData/TBC_counts.csv): Count data, where each row is associated with a single bird species observed at one site, on one day/time, by one observer. This dataset does not include observations of birds outside the survey area or outside the 5-min survey window, and does not include observations made by someone other than the primary observer. This dataset excludes surveys that violated TBC protocols (eg, traveling or incidental counts in eBird, stationary counts that were not 5-min in duration, counts that occurred before 5am or after noon). One exception, however, is a few sites in parks that are surveyed by walking transects rather than surveyed with stationary points (sites with "T" in the siteID). 
     - routeID: unique route ID (ID numbers between 100 and 200 are urban routes; other routes are in parks or protected areas)
     - siteID: unique site ID (includes route ID before the underscore)
     - easting and northing: geographic location, UTMs in NAD83, Zone 12	
