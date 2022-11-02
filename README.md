@@ -77,8 +77,8 @@ After cleaning up and merging data from Access and eBird (in [TBC_DataCleanUp.R]
 	- firstyr: first year surveyed
 	- lastyr: most recent year surveyed (note: all 2021 data may not be included)
 	- n.years: number of years surveyed
-    	- n.visits: number of unique surveys at each site 
-    	- easting and northing: geographic location, UTMs in NAD83, Zone 12	 	
+	- n.visits: number of unique surveys at each site
+	- easting and northing: geographic location, UTMs in NAD83, Zone 12
 	- retired: 1 if the site has been retired (no longer surveyed, or moved because of development or access issues), 0 if not
 	- transect: 1 if the site is surveyed with a walking transect, 0 if surveyed with a stationary count
 
