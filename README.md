@@ -46,9 +46,9 @@ Brief description of each file (csv) with original data:
 	
 After cleaning up and merging data from Access and eBird (in [TBC_DataCleanUp.R](TBC_DataCleanUp.R)), four files were exported and put in the [MergedData](MergedData) folder:
 1. [TBC_counts.csv](MergedData/TBC_counts.csv): Count data, where each row is associated with a single bird species observed at one site, on one day/time, by one observer. This dataset does not include observations of birds outside the survey area or outside the 5-min survey window, and does not include observations made by someone other than the primary observer. This dataset excludes surveys that violated TBC protocols (eg, traveling or incidental counts in eBird, stationary counts that were not 5-min in duration, counts that occurred before 5am or after noon). One exception, however, is a few sites in parks that are surveyed by walking transects rather than surveyed with stationary points (sites with "T" in the siteID). 
-    	- routeID: unique route ID (ID numbers between 100 and 200 are urban routes; other routes are in parks or protected areas)
-    	- siteID: unique site ID (includes route ID before the underscore)
-    	- easting and northing: geographic location, UTMs in NAD83, Zone 12	
+	- routeID: unique route ID (ID numbers between 100 and 200 are urban routes; other routes are in parks or protected areas)
+	- siteID: unique site ID (includes route ID before the underscore)
+	- easting and northing: geographic location, UTMs in NAD83, Zone 12
 	- obsdate: date of survey
 	- yr: year of survey (ranges from 2001 through 2021)
 	- mon: month of survey
@@ -61,18 +61,18 @@ After cleaning up and merging data from Access and eBird (in [TBC_DataCleanUp.R]
 	- source: where was data entered? Access or eBird
 	
 2. [TBC_routes.csv](MergedData/TBC_routes.csv): Information about each TBC route.
-    	- routeID: unique route ID (ID numbers between 100 and 200 are urban routes; other routes are in parks or protected areas)
-    	- firstyr: first year surveyed
-    	- lastyr: most recent year surveyed (note: all 2021 data may not be included)
-    	- n.sites: total number of unique sites ever surveyed as part of this route
-    	- n.sites.ret: number of sites in route that were retired (no longer surveyed, or moved because of development or access issues)
-    	- n.sites.current: number of sites currently included in route
+	- routeID: unique route ID (ID numbers between 100 and 200 are urban routes; other routes are in parks or protected areas)
+	- firstyr: first year surveyed
+	- lastyr: most recent year surveyed (note: all 2021 data may not be included)
+	- n.sites: total number of unique sites ever surveyed as part of this route
+	- n.sites.ret: number of sites in route that were retired (no longer surveyed, or moved because of development or access issues)
+	- n.sites.current: number of sites currently included in route
 	- n.years: number of years at least one site in the route was surveyed
 	- r.urban: 1 if route is in an urban area, 0 otherwise (park or protected area)
 	- r.parks: 1 if route is a park or protected area, 0 otherwise
 
-3. [TBC_sites.csv](MergedData/TBC_sites.csv): Information about each TBC site. 
-    	- siteID: unique site ID (includes associated route ID before the underscore)
+3. [TBC_sites.csv](MergedData/TBC_sites.csv): Information about each TBC site.
+	- siteID: unique site ID (includes associated route ID before the underscore)
 	- routeID
 	- firstyr: first year surveyed
 	- lastyr: most recent year surveyed (note: all 2021 data may not be included)
