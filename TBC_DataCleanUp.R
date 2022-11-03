@@ -156,6 +156,11 @@ library(sf)
     dfe$exclude <- submissions$exclude[match(dfe$submission,submissions$submission)]
     dfe2 <- dfe[dfe$exclude==0,]
     dfe2$exclude <- NULL
+    
+  #Extract a list of submission #s (sampling event identifiers) in this dataset 
+    #that meet the survey criteria
+    seis <- sort(unique(dfe2$submission))
+    # write.table(seis, "clipboard", row.names = FALSE)
   
   #Dataframe with each row = unique combination of locationID, obsdate, and time (by using time, should be unique observers)
     surveys.e <- ddply(dfe2,.(locationID,location,obsdate,hr,min),summarize,n.submissions=length(unique(submission)))
